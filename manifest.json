@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Dialog Remover",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://www.freecodecamp.org/learn/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["https://www.freecodecamp.org/learn/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs", "scripting"]
+}
